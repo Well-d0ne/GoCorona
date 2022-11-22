@@ -1,0 +1,400 @@
+/* Сброс всех дефолтных значений */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------- */
+
+body {
+  height: 100%;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: calc(24px + 16 * (100vw / 1280));
+}
+
+h2 {
+  font-size: calc(20px + 16 * (100vw / 1280));
+}
+
+.h3 {
+  font-size: calc(18px + 16 * (100vw / 1280));
+}
+
+b {
+  font-weight: 700;
+}
+
+.wrapper {
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+@media (min-width: 576px) {
+    [class*="__container"] {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+    [class*="__container"] {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+    [class*="__container"] {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+    [class*="__container"] {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+    [class*="__container"] {
+    max-width: 1320px;
+  }
+}
+/* шапка сайта */
+.header {
+  width: 100%;
+
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  position: relative;
+  background-color: rgba(48,69,167,.9);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 37px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu__list {
+  display: flex;
+}
+.menu__item {
+  margin-left: 2em;
+}
+.menu__link {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Оформление заголовков */
+.title {
+  display: flex;
+  flex-direction: column;
+  color: #3045a7;
+}
+
+.title__one {
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  
+}
+
+.title__two {
+  font-size: 1.6em;
+  font-weight: 500;
+
+  margin-bottom: 1.3em;
+}
+
+.title__btn {
+  display: flex;
+  
+}
+
+.btn {
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: .8px;
+  color: #fff;
+
+  margin-left: 1em;
+
+  padding: .8em 1.5em;
+  border-radius: 5px;
+
+  background-color: #8dbe2d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  text-decoration: none;
+  transition: .2s linear;
+}
+
+.btn:first-child {
+  margin-left: 0;
+}
+
+.btn:hover {
+  background-color: #6a8f20;
+}
+
+.btn_border {
+  background: none;
+  color: #3045a7;
+
+  border: solid 3px #3045a7;
+}
+.btn_border:hover {
+  color: #fff;
+  background: #3045a7;
+}
+
+/* Оформление первого блока */
+
+.intro {
+  padding: 100px 0;
+}
+
+.intro::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-image: url(https://college.snation.kz/releases/v1.149.34/indv/college/images/jumbotron_image-min.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: contain;
+  display: block;
+  width: 100%;
+  max-width: 102.3rem;
+  height: 101.4em;
+  content: "";
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.intro__title {
+  max-width: 440px;
+}
+
+/* оформление второго блока */
+.jobs {
+  padding: 50px 0;
+}
+
+.row {
+  display: flex;
+}
+
+.jobs__row {
+  justify-content: space-between;
+}
+
+.main-services-item-wrap {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15.04px 0.96px rgb(0 0 0 / 47%);
+  cursor: pointer;
+  white-space: initial;
+
+  margin-left: 2em;
+  width: 350px;
+  height: 350px;
+}
+
+.main-services-item-wrap:first-child {
+  margin-left: 0;
+}
+
+.main-services-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  padding-left: 3em;
+  opacity: 1;
+  transition: .3s;
+  color: #fff;
+  background-color: rgba(48, 69, 167, .7);
+}
+
+
+.main-services-item-content-hover {
+  position: absolute;
+  top: calc(100% - 70px);
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding-left: 1.6em;
+  padding-top: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  background: rgba(48, 69, 167, .85);
+}
+
+.main-services-item-content-hover:hover {
+  top: 0;
+}
+
+
+.main-services-item-content-hover ul {
+  padding-top: 20px;
+}
+
+.main-services-item-content-hover li {
+  margin-bottom: 10px;
+}
+
+.direktor {
+  padding: 80px 0;
+}
+
+.director__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.director__img {
+  width: 350px;
+  box-shadow: 0 6px 15.04px 0.96px rgb(0 0 0 / 47%);
+}
+
+.director__words {
+  font-size: 1.8em;
+  max-width: 350px;
+  margin-left: 2em;
+  line-height: 1.5;
+}
+/* time */
+.time {
+  padding: 80px 0;
+}
+
+.time__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.time__title {
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.time__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.row__item {
+  max-width: 450px;
+}
+
+.row__item h3 {
+  font-weight: 600;
+  color: #3045a7;
+  margin-bottom: .5em;
+}
+
+.row__item p {
+  font-size: 1.8em;
+  line-height: 1.5;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #3045a7;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__container p {
+  font-size: 1.8em;
+  color: #fff;
+}
